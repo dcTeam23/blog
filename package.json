@@ -1,0 +1,13 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "mkdir out && cp index.html out/"
+    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
