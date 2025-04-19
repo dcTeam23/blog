@@ -1,4 +1,4 @@
-FROM node:20-lts
+FROM node:22-slim
 
 # Instalação de pacotes essenciais
 RUN apt-get update && apt-get install -y \
