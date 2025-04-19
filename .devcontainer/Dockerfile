@@ -1,7 +1,8 @@
 FROM node:22-slim
 
 # Instalação de pacotes essenciais
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y git-lfs \
+    && git lfs install \
     git \
     bash \
     curl \
