@@ -1,0 +1,36 @@
+{
+  "name": "Blog DC23 - Nextra DevContainer",
+  "build": {
+      "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+      "vscode": {
+          "extensions": [
+              "eamodio.gitlens",
+              "dbaeumer.vscode-eslint",
+              "esbenp.prettier-vscode",
+              "bradlc.vscode-tailwindcss",
+              "unifiedjs.vscode-mdx",
+              "ms-vscode-remote.remote-containers",
+              "pkief.material-icon-theme",
+              "dracula-theme.theme-dracula",
+              "dzhavat.bracket-pair-toggler",
+              "gruntfuggly.todo-tree"
+          ],
+          "settings": {
+              "editor.formatOnSave": true,
+              "editor.defaultFormatter": "esbenp.prettier-vscode",
+              "editor.codeActionsOnSave": {
+                  "source.fixAll.eslint": "always"
+              }
+          }
+      }
+  },
+  "forwardPorts": [3000],
+  "postCreateCommand": "npm install",
+  "remoteUser": "node",
+  "mounts": [
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/node/.ssh,type=bind,consistency=cached",
+    "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/home/node/.gitconfig,type=bind,consistency=cached"
+  ]
+}
