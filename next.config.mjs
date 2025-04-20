@@ -1,6 +1,9 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export'
-};
+import nextra from "nextra";
 
-export default nextConfig;
+const withNextra = nextra({
+  defaultShowCopyCode: true,
+});
+
+export default withNextra({
+  output: "export",
+});
